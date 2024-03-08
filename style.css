@@ -1,0 +1,98 @@
+#filler {
+    display: none;
+}
+#foto {
+    border-radius: 50%;
+    width: 11em;
+}
+.em {
+    width: 1em;
+}
+header {
+    font-size: larger;
+    position: absolute;
+    right: 0.5em;
+    top: 0.5em;
+}
+#persoonlijk {
+   float: right;
+}
+.tabel {
+    border-collapse: collapse;
+}
+.tabel tr {
+    border-top: 1px solid;
+    border-bottom: 1px solid;
+}
+.tabel tr:first-child {
+    border-top: none;
+}
+.tabel tr:last-child {
+    border-bottom: none;
+}
+@media (min-width: 44em) {
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+    main {
+        display: flex;
+    }
+    [class*="col-"] {
+        float: left;
+    }
+    #col-1 {
+        width: 25%;
+        padding: 0.5em;
+    }
+    .col-2 {
+        width: 75%;
+        padding: 0.5em;
+    }
+    body {
+        margin: 0%;
+    }
+    #persoonlijk {
+        float: initial;
+    }
+    #filler {
+        display: block;
+    }
+    #foto {
+        display: block;
+        margin: auto;
+    }
+    summary, #print, #light, #dark {
+        cursor: pointer;
+    }
+    #col-1 {
+        background-color: darkseagreen;
+    }
+    @media (prefers-color-scheme: dark) {
+        #col-1 {
+            background-color: darkslategray;
+        }
+    }
+}
+@media print {
+    #col-1 {
+        background-color: white;
+    }
+    body {
+        color: black;
+        background-color: white;
+        font-size: smaller;
+    }
+    header {
+        display: none;
+    }
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    fieldset {
+        break-inside: avoid;
+    }
+    details {
+        break-inside: avoid;
+    }
+}
