@@ -17,6 +17,9 @@ header {
 #persoonlijk {
    float: right;
 }
+.only_print {
+    display: none;
+}
 .tabel {
     border-collapse: collapse;
 }
@@ -88,6 +91,9 @@ header {
     a {
         text-decoration: none;
         color: black;
+    }
+    .only_print {
+        display: initial;
     }
     fieldset {
         break-inside: avoid;
