@@ -35,8 +35,16 @@ document.getElementById("print").addEventListener("click", () => {
     allDetails.forEach((detail) => {
         detail.open = true;
     });
+    if (colorscheme.getAttribute("content") == "dark") {
+        colorscheme.setAttribute("content", "light");
+        printSchemeFlip = true;
+    }
     print();
+    if (printSchemeFlip) {
+        colorscheme.setAttribute("content", "dark");
+    }
     allDetails.forEach((detail) => {
         detail.open = false;
     })
+    printSchemeFlip = false;
 })
