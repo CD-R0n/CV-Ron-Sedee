@@ -5,6 +5,7 @@ const favicon = document.getElementById("favicon");
 const col1 = document.getElementById("col-1");
 const allDetails = document.querySelectorAll("details");
 let printSchemeFlip;
+// Detect preferred dark/light scheme
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     colorscheme.setAttribute("content", "dark");
     dark.style.display = "none";
@@ -13,6 +14,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     colorscheme.setAttribute("content", "light");
     light.style.display = "none";
 };
+// Dark/light switch which detect if desktop background color has been set
 document.getElementById("lightdark").addEventListener("click", () => {
     if (colorscheme.getAttribute("content") == "dark") {
         colorscheme.setAttribute("content", "light");
@@ -32,6 +34,7 @@ document.getElementById("lightdark").addEventListener("click", () => {
         light.style.display = "initial";
     }
 });
+// Opens and closes details for printing + correct color scheme for printing
 document.getElementById("print").addEventListener("click", () => {
     allDetails.forEach((detail) => {
         detail.open = true;
