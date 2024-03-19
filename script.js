@@ -36,19 +36,23 @@ document.getElementById("lightdark").addEventListener("click", () => {
 });
 // Opens and closes details for printing + correct color scheme for printing
 document.getElementById("print").addEventListener("click", () => {
-    allDetails.forEach((detail) => {
-        detail.open = true;
-    });
-    if (colorscheme.getAttribute("content") == "dark") {
-        colorscheme.setAttribute("content", "light");
-        printSchemeFlip = true;
-    }
-    print();
-    if (printSchemeFlip) {
-        colorscheme.setAttribute("content", "dark");
-    }
-    allDetails.forEach((detail) => {
-        detail.open = false;
+    window.addEventListener("beforeprint", () => {
+        allDetails.forEach((detail) => {
+            detail.open = true;
+        });
+        if (colorscheme.getAttribute("content") == "dark") {
+            colorscheme.setAttribute("content", "light");
+            printSchemeFlip = true;
+        }    
     })
-    printSchemeFlip = false;
+    window.addEventListener("afterprint", () => {
+        if (printSchemeFlip) {
+            colorscheme.setAttribute("content", "dark");
+        }
+        allDetails.forEach((detail) => {
+            detail.open = false;
+        })
+        printSchemeFlip = false; 
+    })
+    print();          
 })
