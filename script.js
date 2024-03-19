@@ -2,6 +2,9 @@ const colorscheme = document.querySelector('meta[name="color-scheme"]');
 const light = document.getElementById("light");
 const dark = document.getElementById("dark");
 const favicon = document.getElementById("favicon");
+const col1 = document.getElementById("col-1");
+const allDetails = document.querySelectorAll("details");
+let printSchemeFlip;
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     colorscheme.setAttribute("content", "dark");
     dark.style.display = "none";
@@ -10,7 +13,6 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     colorscheme.setAttribute("content", "light");
     light.style.display = "none";
 };
-const col1 = document.getElementById("col-1");
 document.getElementById("lightdark").addEventListener("click", () => {
     if (colorscheme.getAttribute("content") == "dark") {
         colorscheme.setAttribute("content", "light");
@@ -30,7 +32,6 @@ document.getElementById("lightdark").addEventListener("click", () => {
         light.style.display = "initial";
     }
 });
-const allDetails = document.querySelectorAll("details");
 document.getElementById("print").addEventListener("click", () => {
     allDetails.forEach((detail) => {
         detail.open = true;
