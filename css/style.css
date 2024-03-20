@@ -104,7 +104,7 @@ header {
     fieldset {
         break-inside: avoid;
     }
-    details {
+    ul {
         break-inside: avoid;
     }
 }
