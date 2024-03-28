@@ -55,6 +55,12 @@ header {
     body {
         margin: 0%;
     }
+    .dark {
+        background-color: darkslategray;
+    }
+    .light {
+        background-color: darkseagreen;
+    }
     h1 {
         width: fit-content;
         margin-left: auto;
@@ -73,14 +79,6 @@ header {
     }
     summary, #print, #light, #dark {
         cursor: pointer;
-    }
-    #col-1 {
-        background-color: darkseagreen;
-    }
-    @media (prefers-color-scheme: dark) {
-        #col-1 {
-            background-color: darkslategray;
-        }
     }
 }
 @media print {

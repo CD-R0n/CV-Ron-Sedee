@@ -10,25 +10,25 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     colorscheme.setAttribute("content", "dark");
     dark.style.display = "none";
     favicon.href = "images/icon_dark.svg";
+    col1.className = "dark";
 } else {
     colorscheme.setAttribute("content", "light");
     light.style.display = "none";
+    col1.className = "light";
 };
-// Dark/light switch which detect if desktop background color has been set
+// Dark/light scheme switch
 document.getElementById("lightdark").addEventListener("click", () => {
     if (colorscheme.getAttribute("content") == "dark") {
         colorscheme.setAttribute("content", "light");
-        if ((window.getComputedStyle(col1).getPropertyValue("background-color")) == ("rgb(47, 79, 79)")) {
-            col1.style.backgroundColor = "darkseagreen";
-        }
+        col1.classList.remove("dark");
+        col1.classList.add("light");
         favicon.href = "images/icon_light.svg";
         light.style.display = "none";
         dark.style.display = "initial";
     } else {
         colorscheme.setAttribute("content", "dark");
-        if ((window.getComputedStyle(col1).getPropertyValue("background-color")) == ("rgb(143, 188, 143)")) {
-            col1.style.backgroundColor = "darkslategrey";
-        }
+        col1.classList.remove("light");
+        col1.classList.add("dark");
         favicon.href = "images/icon_dark.svg";
         dark.style.display = "none";
         light.style.display = "initial";
