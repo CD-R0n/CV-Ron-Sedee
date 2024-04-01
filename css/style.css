@@ -33,7 +33,12 @@ header {
 .tabel tr:last-child {
     border-bottom: none;
 }
-@media (min-width: 44em) {
+.skill {
+    float: left;
+    position: absolute;
+    left: 9em;
+}
+@media (min-width: 43em) {
     *, *::before, *::after {
         box-sizing: border-box;
     }
@@ -103,7 +108,7 @@ header {
     fieldset {
         break-inside: avoid;
     }
-    ul {
+    details {
         break-inside: avoid;
     }
 }

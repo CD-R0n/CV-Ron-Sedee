@@ -4,6 +4,7 @@ const dark = document.getElementById("dark");
 const favicon = document.getElementById("favicon");
 const col1 = document.getElementById("col-1");
 const allDetails = document.querySelectorAll("details");
+const openp = document.querySelectorAll('details[open]');
 let printSchemeFlip;
 // Detect preferred dark/light scheme
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
@@ -51,6 +52,9 @@ document.getElementById("print").addEventListener("click", () => {
         }
         allDetails.forEach((detail) => {
             detail.open = false;
+        })
+        openp.forEach((detail) => {
+            detail.open = true;
         })
         printSchemeFlip = false; 
     })
