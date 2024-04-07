@@ -1,114 +1,286 @@
+:root {
+    --dark-canvas: darkslategrey;
+    --dark-text: #264040;
+    --light-canvas: darkseagreen;
+    --light-text: #70a970;
+}
+
+h1 {
+    background-color: var(--dark-canvas);
+    border-radius: 1em 1em 0em 0em;
+    margin-top: 0em;
+    padding: 0.3em;
+}
+
+h1.dark {
+    background-color: var(--dark-canvas);
+}
+
+h1.light {
+    background-color: var(--light-canvas);
+}
+
 #filler {
     display: none;
 }
+
 #foto {
     border-radius: 50%;
     width: 11em;
 }
+
 .em {
     width: 1em;
 }
+
 header {
     font-size: larger;
     position: absolute;
-    right: 0.5em;
-    top: 0.5em;
+    right: 1em;
+    top: 1.2em;
 }
+
 #persoonlijk {
-   float: right;
+    float: right;
 }
+
 .only_print {
     display: none;
 }
-.tabel {
+
+table {
     border-collapse: collapse;
 }
+
 .tabel tr {
     border-top: 1px solid;
     border-bottom: 1px solid;
 }
+
 .tabel tr:first-child {
     border-top: none;
 }
+
 .tabel tr:last-child {
     border-bottom: none;
 }
-.skill {
-    float: left;
-    position: absolute;
-    left: 9em;
+
+details.light {
+    border: solid;
+    border-color: ButtonFace;
 }
+
+details {
+    margin: 0.5em 0em;
+    overflow: hidden;
+}
+
+section details:first-of-type {
+    border-radius: 1em 1em 0em 0em;
+}
+
+section details:last-of-type {
+    border-radius: 0em 0em 1em 1em;
+}
+
+summary {
+    padding: 0.5em;
+}
+
+.content {
+    padding-left: 0.5em;
+    padding-right: 0.5em;
+}
+
+details table {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+details.dark {
+    border: solid;
+    border-color: var(--dark-canvas);
+}
+
+details.light {
+    border: solid;
+    border-color: var(--light-canvas);
+}
+
+summary.dark {
+    background-color: var(--dark-canvas);
+}
+
+summary.light {
+    background-color: var(--light-canvas);
+}
+
 @media (min-width: 43em) {
-    *, *::before, *::after {
+
+    *,
+    *::before,
+    *::after {
         box-sizing: border-box;
     }
+
     main {
         display: flex;
     }
-    [class*="col-"] {
-        float: left;
-    }
+
     #col-1 {
         width: 25%;
         padding: 0.5em;
         min-width: 17em;
     }
+
     .col-2 {
         width: 75%;
         padding: 0.5em;
     }
+
     body {
-        margin: 0%;
+        max-width: 100em;
+        margin: auto;
+        background-color: Canvas;
     }
-    .dark {
-        background-color: darkslategray;
-    }
-    .light {
-        background-color: darkseagreen;
-    }
+
     h1 {
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
     }
+
     #persoonlijk {
         float: initial;
     }
+
     #filler {
         display: block;
+        background-color: initial;
     }
+
     #foto {
         display: block;
         margin: auto;
         margin-bottom: 1em;
     }
-    summary, #print, #light, #dark {
+
+    summary,
+    #print,
+    #light,
+    #dark {
         cursor: pointer;
     }
+
+    #col-1.dark {
+        background-color: var(--dark-canvas);
+    }
+
+    #col-1.light {
+        background-color: var(--light-canvas);
+    }
+
+    #col-1 details.dark {
+        border-color: var(--dark-text);
+    }
+
+    #col-1 details.light {
+        background-color: var(--light-canvas);
+        border-color: var(--light-text);
+    }
+
+    #col-1 summary.dark {
+        background-color: var(--dark-text);
+    }
+
+    #col-1 summary.light {
+        background-color: var(--light-text);
+    }
+
+    #col-1 section details:first-of-type {
+        border-radius: 1em 0em 0em 0em;
+    }
+
+    #col-1 section details:last-of-type {
+        border-radius: 0em 0em 0em 1em;
+    }
+
+    .col-2 section details:first-of-type {
+        border-radius: 0em 1em 0em 0em;
+    }
+
+    .col-2 section details:last-of-type {
+        border-radius: 0em 0em 1em 0em;
+    }
 }
+
+@media (min-width: 100em) {
+    html.dark {
+        background-color: Field;
+    }
+
+    html.light {
+        background-color: ButtonFace;
+    }
+
+    body {
+        margin-top: revert;
+    }
+
+    body {
+        border-radius: 1em 1em 0em 0em;
+    }
+
+    #col-1 {
+        border-radius: 1em 0em 0em 0em;
+        padding-left: 1.5em;
+        padding-right: 1.5em;
+    }
+
+    div.col-2 {
+        padding-right: 1.5em;
+        padding-left: 1.5em;
+    }
+
+}
+
 @media print {
+    @page {
+        size: a4 portrait;
+        size: 61em calc(61em * 1.41);
+    }
+
     #col-1 {
         background-color: white;
         min-width: unset;
     }
+
     body {
         color: black;
         background-color: white;
-        font-size: smaller;
     }
+
     header {
         display: none;
     }
+
     a {
         color: black;
     }
+
     .only_print {
         display: initial;
     }
-    fieldset {
-        break-inside: avoid;
-    }
+
     details {
         break-inside: avoid;
+    }
+
+    #col-1 details {
+        border: none !important;
+    }
+
+    .col-2 details {
+        border: solid;
     }
 }
