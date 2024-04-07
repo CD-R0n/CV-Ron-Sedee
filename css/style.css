@@ -6,7 +6,6 @@
 }
 
 h1 {
-    background-color: var(--dark-canvas);
     border-radius: 1em 1em 0em 0em;
     margin-top: 0em;
     padding: 0.3em;
@@ -130,7 +129,7 @@ summary.light {
     #col-1 {
         width: 25%;
         padding: 0.5em;
-        min-width: 17em;
+        min-width: 20em;
     }
 
     .col-2 {
@@ -146,6 +145,7 @@ summary.light {
 
     h1 {
         all: revert;
+        background-color: unset !important;
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
