@@ -31,7 +31,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
         detail.className = ("light");
     });
     summary.forEach((summary) => {
-        summary.className = ("dark");
+        summary.className = ("light");
     });
 };
 // Dark/light scheme switch
