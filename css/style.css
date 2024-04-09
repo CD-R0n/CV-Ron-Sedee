@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root {
     --dark-canvas: darkslategrey;
     --dark-text: #264040;
@@ -114,14 +120,70 @@ summary.light {
     background-color: var(--light-canvas);
 }
 
+td.progress {
+    height: 1em;
+    width: 100%;
+    padding-right: 1em;
+}
+
+div.progress {
+    background-color: ButtonFace;
+    width: 100%;
+    height: 35%;
+    border-radius: 1em;
+    border: 1px solid;
+}
+
+div.progress div {
+    background-color: CanVasText;
+    height: 100%;
+}
+
+div.html {
+    width: 95%;
+}
+
+div.agile_scrum {
+    width: 90%;
+}
+
+div.css {
+    width: 85%;
+}
+
+div.javascript {
+    width: 85%;
+}
+
+div.jquery {
+    width: 90%;
+}
+
+div.webdesign {
+    width: 75%;
+}
+
+div.nodejs {
+    width: 60%;
+}
+
+div.react {
+    width: 20%;
+}
+
+div.mysql {
+    width: 15%;
+}
+
+div.bootstrap {
+    width: 45%;
+}
+
+div.php {
+    width: 15%;
+}
+
 @media (min-width: 43em) {
-
-    *,
-    *::before,
-    *::after {
-        box-sizing: border-box;
-    }
-
     main {
         display: flex;
     }
@@ -145,7 +207,6 @@ summary.light {
 
     h1 {
         all: revert;
-        background-color: unset !important;
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
@@ -283,5 +344,10 @@ summary.light {
 
     .col-2 details {
         border: solid;
+    }
+
+    div.progress * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
     }
 }
