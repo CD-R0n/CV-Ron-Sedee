@@ -144,7 +144,7 @@ div.html {
 }
 
 div.agile_scrum {
-    width: 90%;
+    width: 95%;
 }
 
 div.css {
@@ -159,28 +159,40 @@ div.jquery {
     width: 90%;
 }
 
-div.webdesign {
-    width: 75%;
+div.uiux {
+    width: 80%;
 }
 
 div.nodejs {
-    width: 60%;
+    width: 75%;
 }
 
 div.react {
-    width: 20%;
+    width: 70%;
 }
 
 div.mysql {
-    width: 15%;
+    width: 70%;
 }
 
 div.bootstrap {
-    width: 45%;
+    width: 70%;
 }
 
 div.php {
-    width: 15%;
+    width: 45%;
+}
+
+div.wetgeving {
+    width: 85%;
+}
+
+div.prototyping {
+    width: 70%;
+}
+
+div.git {
+    width: 85%;
 }
 
 @media (min-width: 43em) {
@@ -332,6 +344,16 @@ div.php {
 
     .only_print {
         display: initial;
+    }
+
+    table {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    h2 {
+        margin-top: 0.5em !important;
+        margin-bottom: 0.5em !important;
     }
 
     details {
