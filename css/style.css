@@ -346,16 +346,6 @@ div.git {
         display: initial;
     }
 
-    table {
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-    }
-
-    h2 {
-        margin-top: 0.5em !important;
-        margin-bottom: 0.5em !important;
-    }
-
     details {
         break-inside: avoid;
     }
