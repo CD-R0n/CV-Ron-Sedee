@@ -49,6 +49,10 @@ header {
     float: right;
 }
 
+a {
+    text-decoration: none;
+}
+
 .only_print {
     display: none;
 }
@@ -86,6 +90,10 @@ section details:first-of-type {
 
 section details:last-of-type {
     border-radius: 0em 0em 1em 1em;
+}
+
+strong {
+    font-size: large;
 }
 
 summary {
@@ -361,5 +369,9 @@ div.git {
     div.progress * {
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
+    }
+    table, ul {
+        margin-top: 0.3em !important;
+        margin-bottom: 0.3em !important;
     }
 }
