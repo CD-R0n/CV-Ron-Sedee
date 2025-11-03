@@ -147,10 +147,6 @@ div.progress div {
     height: 100%;
 }
 
-div.html {
-    width: 95%;
-}
-
 div.agile_scrum {
     width: 95%;
 }
@@ -163,44 +159,16 @@ div.javascript {
     width: 85%;
 }
 
-div.jquery {
-    width: 90%;
-}
-
-div.uiux {
-    width: 80%;
-}
-
-div.nodejs {
-    width: 75%;
-}
-
 div.linux {
     width: 75%;
-}
-
-div.react {
-    width: 70%;
 }
 
 div.mysql {
     width: 70%;
 }
 
-div.bootstrap {
-    width: 70%;
-}
-
 div.php {
     width: 45%;
-}
-
-div.wetgeving {
-    width: 85%;
-}
-
-div.prototyping {
-    width: 70%;
 }
 
 div.git {
