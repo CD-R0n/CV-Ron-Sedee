@@ -13,7 +13,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     dark.style.display = "none";
     favicon.href = "images/icon_dark.svg";
     document.querySelector("html").className = ("dark");
-    document.querySelector("h1").className = ("dark");
+    document.querySelector("#title").className = ("dark");
     col1.className = "dark";
     allDetails.forEach((detail) => {
         detail.className = ("dark");
@@ -25,7 +25,7 @@ if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').match
     colorscheme.setAttribute("content", "light");
     light.style.display = "none";
     document.querySelector("html").className = ("light");
-    document.querySelector("h1").className = ("light");
+    document.querySelector("#title").className = ("light");
     col1.className = "light";
     allDetails.forEach((detail) => {
         detail.className = ("light");

@@ -11,18 +11,32 @@
     --light-text: #70a970;
 }
 
-h1 {
+#title {
     border-radius: 1em 1em 0em 0em;
     margin-top: 0em;
+    margin-bottom: 1em;
     padding: 0.3em;
+    text-align: center;
 }
 
-h1.dark {
+#title.dark {
     background-color: var(--dark-canvas);
 }
 
-h1.light {
+#title.light {
     background-color: var(--light-canvas);
+}
+
+#title h2 {
+    margin-top: 0;
+}
+
+h1 {
+    margin-bottom: 0;
+}
+
+h2 {
+    margin-bottom: 0;
 }
 
 #filler {
@@ -197,11 +211,12 @@ div.git {
         background-color: Canvas;
     }
 
-    h1 {
+    #title {
         all: revert;
         width: fit-content;
         margin-left: auto;
         margin-right: auto;
+        margin-bottom: 1em;
     }
 
     #persoonlijk {
