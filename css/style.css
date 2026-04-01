@@ -27,15 +27,7 @@
     background-color: var(--light-canvas);
 }
 
-#title h2 {
-    margin-top: 0;
-}
-
 h1 {
-    margin-bottom: 0;
-}
-
-h2 {
     margin-bottom: 0;
 }
 
@@ -73,19 +65,6 @@ a {
 
 table {
     border-collapse: collapse;
-}
-
-.tabel tr {
-    border-top: 1px solid;
-    border-bottom: 1px solid;
-}
-
-.tabel tr:first-child {
-    border-top: none;
-}
-
-.tabel tr:last-child {
-    border-bottom: none;
 }
 
 details.light {
@@ -161,8 +140,12 @@ div.progress div {
     height: 100%;
 }
 
-div.agile_scrum {
+div.hardware {
     width: 95%;
+}
+
+div.agile_scrum {
+    width: 90%;
 }
 
 div.css {
@@ -175,14 +158,6 @@ div.javascript {
 
 div.linux {
     width: 75%;
-}
-
-div.mysql {
-    width: 70%;
-}
-
-div.php {
-    width: 45%;
 }
 
 div.git {
@@ -342,6 +317,10 @@ div.git {
     }
 
     details {
+        break-inside: avoid;
+    }
+
+    #col-1 section {
         break-inside: avoid;
     }
 
