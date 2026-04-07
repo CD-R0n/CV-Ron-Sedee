@@ -37,7 +37,7 @@ h1 {
 
 #foto {
     border-radius: 50%;
-    width: 11em;
+    width: 13em;
 }
 
 .em {
@@ -272,11 +272,11 @@ div.git {
     }
 
     body {
-        border-radius: 1em 1em 0em 0em;
+        border-radius: 1em 1em 1em 1em;
     }
 
     #col-1 {
-        border-radius: 1em 0em 0em 0em;
+        border-radius: 1em 0em 0em 1em;
         padding-left: 1.5em;
         padding-right: 1.5em;
     }
