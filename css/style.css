@@ -37,7 +37,11 @@ h1 {
 
 #foto {
     border-radius: 50%;
-    width: 13em;
+    width: 12em;
+}
+
+section > details:first-of-type {
+    margin-top: 2em;
 }
 
 .em {
@@ -317,10 +321,6 @@ div.git {
     }
 
     details {
-        break-inside: avoid;
-    }
-
-    #col-1 section {
         break-inside: avoid;
     }
 
